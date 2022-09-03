@@ -12,7 +12,7 @@ const AdvancedStats = () => {
   }, []);
 
   return (
-    <div>
+    <div className='mw-1500'>
       <div className="center-text">
         <h2>Advanced Statistics</h2>
         <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>

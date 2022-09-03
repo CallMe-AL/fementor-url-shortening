@@ -94,7 +94,7 @@ const ShortenForm = () => {
   }
 
   return (
-    <div className='shorten-section'>
+    <div className='shorten-section mw-1500'>
       <form className={`shortening-form ${error ? 'error' : ''}`}>
         <label htmlFor="url" className="sr-only">Shorten a link here</label>
         <input 

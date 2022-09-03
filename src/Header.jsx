@@ -14,7 +14,7 @@ const Header = () => {
   }
 
   return (
-    <header>
+    <header className='mw-1500'>
       <nav className='desktop-nav'>
         <img src={logo} alt="shortly logo" />
         <ul className='list-styles flex'>
