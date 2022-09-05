@@ -611,6 +611,8 @@ header {
 .link-item .original-link {
   padding: 1rem;
   border-bottom: 1px solid hsl(var(--gray));
+  width: 100%;
+  word-break: break-all;
 }
 
 .shortened-container {

@@ -7,7 +7,6 @@ const ShortenForm = () => {
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState('Please enter a valid url!');
   const [originalLinks, setOriginalLinks] = useState([]);
-  const [shortenedLink, setShortenedLink] = useState('');
   const [shortenedLinks, setShortenedLinks] = useState([]);
 
   useEffect(() => {
@@ -65,8 +64,6 @@ const ShortenForm = () => {
 
         let newLink = data.result.full_short_link3;
         let newObj = {newLink: newLink, oldLink: link};
-
-        setShortenedLink(newLink);
 
         if (shortenedLinks.length > 0) {
           let newArray = [...shortenedLinks, newObj];

@@ -8,7 +8,6 @@ const ShortenedLink = ({ newLink, oldLink }) => {
 
   const copy = () => {
     setCopied({ value: newLink, copied: true });
-    console.log(copied);
 
     setTimeout(() => {
       setCopied({ value: newLink, copied: false });
