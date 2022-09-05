@@ -12,7 +12,7 @@ const Footer = () => {
     <footer>
       <div className="footer-wrap">
         <img className='logo' src={logo} alt="shortly logo" />
-        <nav aria-roledescription='footer navigation'>
+        <nav aria-roledescription='explore more navigation'>
           <ul className="footer-links list-styles">
             <li className='footer-link'><span>Features</span>
               <ul className='list-margin'>
