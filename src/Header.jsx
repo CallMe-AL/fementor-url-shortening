@@ -15,17 +15,17 @@ const Header = () => {
 
   return (
     <header className='mw-1500'>
-      <nav className='desktop-nav'>
+      <nav className='desktop-nav' aria-label='desktop navbar'>
         <img src={logo} alt="shortly logo" />
         <ul className='list-styles flex'>
           <li>
-            <a href="#">Features</a>
+            <a href="#" aria-label='dummy label for display only'>Features</a>
           </li>
           <li>
-            <a href="#">Pricing</a>
+            <a href="#" aria-label='dummy label for display only'>Pricing</a>
           </li>
           <li>
-            <a href="#">Resources</a>
+            <a href="#" aria-label='dummy label for display only'>Resources</a>
           </li>
         </ul>
         <div className="account-btns">
@@ -33,25 +33,25 @@ const Header = () => {
           <button className="sign-up btn-colors">Sign Up</button>
         </div>
       </nav>
-      <nav className='mobile-nav'>
+      <nav className='mobile-nav' aria-label='mobile navbar'>
         <div className="nav-container flex">
           <img src={logo} alt="shortly logo" />
-          <button onClick={menuToggle} className={`links-toggle menu-container ${menu_open ? 'close' : ''}`} aria-label='links'>
+          <div onClick={menuToggle} className={`links-toggle menu-container ${menu_open ? 'close' : ''}`} aria-label='links'>
             <div class="top-bar"></div>
             <div class="middle-bar"></div>
             <div class="bottom-bar"></div>
-          </button>
+          </div>
         </div>
         <div className={`mobile-dropdown flex ${menu_open ? 'open' : ''}`}>
           <ul className='mobile-links list-styles'>
             <li>
-              <a href="#">Features</a>
+              <a href="#" aria-label='dummy label for display only'>Features</a>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <a href="#" aria-label='dummy label for display only'>Pricing</a>
             </li>
             <li>
-              <a href="#">Resources</a>
+              <a href="#" aria-label='dummy label for display only'>Resources</a>
             </li>
           </ul>
           <div className="account-btns flex">

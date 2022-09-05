@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fementor-url-shortening/static/css/main.b629bed0.css",
-    "main.js": "/fementor-url-shortening/static/js/main.dc0b5bea.js",
+    "main.css": "/fementor-url-shortening/static/css/main.072f2303.css",
+    "main.js": "/fementor-url-shortening/static/js/main.fda6eea9.js",
     "static/js/787.23b20b20.chunk.js": "/fementor-url-shortening/static/js/787.23b20b20.chunk.js",
     "static/media/illustration-working.svg": "/fementor-url-shortening/static/media/illustration-working.c9b5ef5452363d8be3df709375d50bd0.svg",
     "static/media/logo.svg": "/fementor-url-shortening/static/media/logo.834643034343520f3b4d7e43111ed4d8.svg",
@@ -10,12 +10,12 @@
     "static/media/bg-boost-mobile.svg": "/fementor-url-shortening/static/media/bg-boost-mobile.4b04bd89ea775da3deff.svg",
     "static/media/bg-shorten-desktop.svg": "/fementor-url-shortening/static/media/bg-shorten-desktop.0d9742f433f4b0d8752b.svg",
     "static/media/bg-shorten-mobile.svg": "/fementor-url-shortening/static/media/bg-shorten-mobile.41c34b33a14a3077e506.svg",
-    "main.b629bed0.css.map": "/fementor-url-shortening/static/css/main.b629bed0.css.map",
-    "main.dc0b5bea.js.map": "/fementor-url-shortening/static/js/main.dc0b5bea.js.map",
+    "main.072f2303.css.map": "/fementor-url-shortening/static/css/main.072f2303.css.map",
+    "main.fda6eea9.js.map": "/fementor-url-shortening/static/js/main.fda6eea9.js.map",
     "787.23b20b20.chunk.js.map": "/fementor-url-shortening/static/js/787.23b20b20.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b629bed0.css",
-    "static/js/main.dc0b5bea.js"
+    "static/css/main.072f2303.css",
+    "static/js/main.fda6eea9.js"
   ]
 }

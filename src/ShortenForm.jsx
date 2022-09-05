@@ -110,8 +110,9 @@ const ShortenForm = () => {
   return (
     <div className='shorten-section mw-1500'>
       <form className={`shortening-form ${error ? 'error' : ''}`}>
-        <label htmlFor="url" className="sr-only">Shorten a link here</label>
+        <label htmlFor="url" className="sr-only" aria-label='label for screen readers only'>Shorten a link here</label>
         <input 
+          aria-roledescription='input for form'
           type="url" 
           placeholder='Must be an "https://" link...' 
           id='url' 
@@ -123,7 +124,7 @@ const ShortenForm = () => {
           
         />
         <p className={`error-message ${error ? 'error' : ''}`}>{errorMsg}</p>
-        <button className="shorten-it-btn btn-colors" onClick={(e) => shortenLink(e)}>Shorten it!</button>
+        <button aria-roledescription='button for form element' className="shorten-it-btn btn-colors" onClick={(e) => shortenLink(e)}>Shorten it!</button>
       </form>
       <div className="links-container">
         {
