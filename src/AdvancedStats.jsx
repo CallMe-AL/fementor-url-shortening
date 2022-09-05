@@ -12,7 +12,7 @@ const AdvancedStats = () => {
   }, []);
 
   return (
-    <section className='mw-1500'>
+    <section className='mw-1500' aria-label='explore how you can track the statistics of your links'>
       <div className="center-text">
         <h2>Advanced Statistics</h2>
         <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
