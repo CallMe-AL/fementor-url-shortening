@@ -5,6 +5,7 @@ const ShortenForm = () => {
 
   const [link, setLink] = useState('');
   const [error, setError] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('Please enter a valid url!');
   const [originalLinks, setOriginalLinks] = useState([]);
   const [shortenedLink, setShortenedLink] = useState('');
   const [shortenedLinks, setShortenedLinks] = useState([]);
@@ -16,24 +17,21 @@ const ShortenForm = () => {
 
     if (shorteneds) {
       setShortenedLinks(shorteneds);
-    }
-
-    if (originals) {
       setOriginalLinks(originals);
+    } else if (!shorteneds) {
+      setOriginalLinks([]);
     }
-
-    console.log('shorts ', shorteneds);
-    console.log('originals ', originals);
 
   }, []);
 
   const handleLink = (e) => {
     setLink(e.target.value);
-    console.log('link: ', e.target.value);
   }
 
   const shortenLink = (e) => {
     e.preventDefault();
+    setError(false);
+    setErrorMsg('Please enter a valid url!');
 
     // checks if there's any input
     if (link.trim() === '') {
@@ -49,11 +47,22 @@ const ShortenForm = () => {
 
     // checks if user already send that link before
     let exists = checkLinks(link);
-    if (exists) return;
+    if (exists) {
+      setError(true);
+      setErrorMsg('You\'ve already tried this link!');
+      return;
+    };
 
     fetch(`https://api.shrtco.de/v2/shorten?url=${link}`)
       .then(res => res.json())
       .then(data => {
+
+        if (data.error) {
+          setErrorMsg(data.error);
+          setError(true);          
+          return;
+        }
+
         let newLink = data.result.full_short_link3;
         let newObj = {newLink: newLink, oldLink: link};
 
@@ -93,6 +102,14 @@ const ShortenForm = () => {
     }
   }
 
+  const clearLinks = () => {
+    setOriginalLinks([]);
+    setShortenedLinks([]);
+
+    localStorage.removeItem('newlinks');
+    localStorage.removeItem('orglinks');
+  }
+
   return (
     <div className='shorten-section mw-1500'>
       <form className={`shortening-form ${error ? 'error' : ''}`}>
@@ -108,16 +125,20 @@ const ShortenForm = () => {
           pattern="https://.*"
           
         />
-        <p className={`error-message ${error ? 'error' : ''}`}>Please enter a valid url!</p>
+        <p className={`error-message ${error ? 'error' : ''}`}>{errorMsg}</p>
         <button className="shorten-it-btn btn-colors" onClick={(e) => shortenLink(e)}>Shorten it!</button>
       </form>
       <div className="links-container">
         {
           shortenedLinks.length > 0 && shortenedLinks.map(link => {
-            return <ShortenedLink newLink={link.newLink} oldLink={link.oldLink}/>;
+            let rndm = Math.floor(Math.random() * 50000);
+            return <ShortenedLink newLink={link.newLink} oldLink={link.oldLink} key={rndm}/>;
           })
         }
-        
+        {
+          shortenedLinks.length > 0 
+          && <button className='clear-links-btn' onClick={clearLinks}>Clear Links</button>
+        }        
       </div>
       
     </div>

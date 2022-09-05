@@ -15,23 +15,13 @@ library.add(fas, faFontAwesome, faTwitter, faSquareFacebook, faPinterest, faInst
 function App() {
   return (
     <div className="app">
-        <Header />
-        <Main />
-        <ShortenForm />
-        <AdvancedStats />
+      <Header />
+      <Main />
+      <ShortenForm />
+      <AdvancedStats />
       <BoostLinks />
       <Footer />
     </div>
-    // <div className="app">
-    //   <div className='partial-wrap'>
-    //     <Header />
-    //     <Main />
-    //     <ShortenForm />
-    //     <AdvancedStats />
-    //   </div>
-    //   <BoostLinks />
-    //   <Footer />
-    // </div>
   );
 }
 
