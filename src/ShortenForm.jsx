@@ -109,7 +109,7 @@ const ShortenForm = () => {
 
   return (
     <div className='shorten-section mw-1500'>
-      <form className={`shortening-form ${error ? 'error' : ''}`}>
+      <form className={`shortening-form ${error ? 'error' : ''}`} aria-labelledby='url shortening form'>
         <label htmlFor="url" className="sr-only" aria-label='label for screen readers only'>Shorten a link here</label>
         <input 
           aria-roledescription='input for form'
